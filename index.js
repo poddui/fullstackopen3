@@ -8,6 +8,8 @@ app.use(cors())
 
 app.use(express.json())
 
+app.use(express.static('dist'))
+
 morgan.token('postData', (req, res) => {
     return JSON.stringify(req.body);
   });
